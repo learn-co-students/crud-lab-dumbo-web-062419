@@ -1,4 +1,14 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux'
+
+
+const mapStateToProps = () => {
+  return ({ })
+}
+
+const mapDispatchToProps = () => {
+  return { }
+}
 
 class RestaurantInput extends Component {
   render() {
@@ -10,4 +20,4 @@ class RestaurantInput extends Component {
   }
 };
 
-export default RestaurantInput;
+export default connect(mapStateToProps, mapDispatchToProps)(RestaurantInput);
