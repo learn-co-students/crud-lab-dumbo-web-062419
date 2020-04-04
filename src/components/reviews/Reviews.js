@@ -12,9 +12,11 @@ class Reviews extends Component {
       return <Review key={index} review={review} deleteReview={deleteReview} />
     })
     return (
-      <ul>
-        {reviewList}
-      </ul>
+      <div>
+        <ul>
+          {reviewList}
+        </ul>
+      </div>
     );
   }
 };
