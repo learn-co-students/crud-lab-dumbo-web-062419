@@ -8,6 +8,7 @@ export default function manageRestaurants(state = {
   switch (action.type) {
 
     case 'ADD_RESTAURANT':
+
       const restaurant = { text: action.text, id: cuidFn() };
       return {
         ...state,
@@ -19,10 +20,11 @@ export default function manageRestaurants(state = {
       return { ...state, restaurants}
 
     case 'ADD_REVIEW':
+
       const review = { text: action.review.text, restaurantId: action.review.restaurantId, id: cuidFn() };
       return {
         ...state,
-        reviews: [ ...state, review]
+        reviews: [ ...state.reviews, review]
       }
 
     case 'DELETE_REVIEW':
